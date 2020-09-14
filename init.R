@@ -5,3 +5,5 @@ library(lubridate)
 library(purrr)
 library(rvest)
 library(xml2)
+
+source("utils.R")

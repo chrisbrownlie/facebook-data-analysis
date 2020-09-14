@@ -37,14 +37,14 @@ get_liked_pages <- function(folder = "data") {
 }
 
 
-#' Get posts and comments
+#' Get reactions
 #'
 #' @param folder the name of the data folder (in the project root directory)
 #' 
-#' @return data frame of all posts and comments made
-get_posts_and_comments <- function(folder = "data") {
+#' @return data frame of all reactions to posts and comments
+get_reactions <- function(folder = "data") {
   
-  posts_and_comments <- fromJSON(file = file.path(folder, "likes_and_reactions", "posts_and_comments.json"))[[1]] %>%
+  reactions <- fromJSON(file = file.path(folder, "likes_and_reactions", "posts_and_comments.json"))[[1]] %>%
     lapply(as.data.frame) %>%
     bind_rows() %>%
     transmute(date_time = as_datetime(timestamp),
@@ -54,5 +54,5 @@ get_posts_and_comments <- function(folder = "data") {
               content_name = str_extract(title, pattern = "(?<=:)[[:print:]]+"),
               location = str_extract(title, pattern = "(?<= in | on )[[:print:]]+"))
   
-  return(posts_and_comments)
+  return(reactions)
 }

@@ -20,7 +20,6 @@ get_comments <- function(folder = "data") {
           comment_author <- NA
           comment_content <- NA
       }
-      i <<- i+1
       data.frame(date_time = ts,
                  author = comment_author,
                  comment_date_time = comment_ts,
@@ -31,4 +30,5 @@ get_comments <- function(folder = "data") {
     }) %>%
     reduce(bind_rows)
   
+  return(comms)
 }

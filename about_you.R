@@ -1,6 +1,3 @@
-source("init.R")
-
-
 #' Get facial recognition info
 #' 
 #' @param folder the name of the data folder (in the project root directory)
