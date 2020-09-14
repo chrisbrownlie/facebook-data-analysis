@@ -4,7 +4,7 @@ Code for analysis and cretating the visualisations used in my blog post series "
 I downloaded all my personal data from Facebook by going to 'Settings'->'Your Facebook Information'->'Download your information'. I then downloaded everything available in JSON format.
 
 # Note
-The code uses the myFacebook R package which I developed as part of this work. You can find more info [here](github.com/chrisbrownlie/myFacebook).
+The code uses the myFacebook R package which I developed as part of this work. You can find more info [here](https://github.com/chrisbrownlie/myFacebook).
 
 The script has not been tested or checked in any way. If you are unfamiliar with R it may take some time & effort for you to get this working on your own data, the same goes for the myFacebook R package.
 
